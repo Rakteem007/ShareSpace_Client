@@ -25,13 +25,14 @@ const PostWidget = ({
     const loggedInUserId = useSelector((state) => state.user._id);
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;//to keep the like count same even after refresh
+    const BASE_URL="https://sharespace-server.onrender.com";
 
     const { palette } = useTheme();
     const main = palette.neutral.main;
     const primary = palette.primary.main;
 
     const patchLike = async () => {
-        const response = await fetch(`http://localhost:3001/posts/${postId}/like`,{
+        const response = await fetch(`${BASE_URL}/posts/${postId}/like`,{
             method : "PATCH",
             headers : {
                 Authorization : `Bearer ${token}`, 
@@ -60,7 +61,7 @@ const PostWidget = ({
              height="auto"
              alt="post"
              style={{ borderRadius : "0.75rem", marginTop : "0.75rem"}}
-             src={`http://localhost:3001/assets/${picturePath}`}
+             src={`${BASE_URL}/assets/${picturePath}`}
              />
         )}
         {/* likes section */}

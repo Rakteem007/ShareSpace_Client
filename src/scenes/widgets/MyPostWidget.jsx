@@ -16,6 +16,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
 
+
 const MyPostWidget = ( { picturePath}) => {
 
     const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const MyPostWidget = ( { picturePath}) => {
     const isNonMobileScreens = useMediaQuery("(min-width : 1000px)");
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
+    const BASE_URL="https://sharespace-server.onrender.com";
 
     const handlePost = async () => {
 
@@ -40,7 +42,7 @@ const MyPostWidget = ( { picturePath}) => {
             formData.append("picturePath", image.name);
         }
 
-        const response = await fetch(`http://localhost:3001/posts`, {
+        const response = await fetch(`${BASE_URL}/posts`, {
 
             method : "POST",
             headers : { Authorization : `Bearer ${token}`},
