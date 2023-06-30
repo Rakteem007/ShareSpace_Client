@@ -11,7 +11,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BASE_URL } from "components/URL";
+const BASE_URL="https://sharespace-server.onrender.com";
 
 const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null);

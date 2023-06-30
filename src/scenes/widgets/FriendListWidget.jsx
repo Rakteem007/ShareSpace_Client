@@ -4,7 +4,8 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
-import { BASE_URL } from "components/URL";
+
+const BASE_URL="https://sharespace-server.onrender.com";
 
 const FriendListWidget = ({ userId }) => {
 
