@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
-const BASE_URL="https://sharespace-server.onrender.com";
+import { BASE_URL } from "components/URL";
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),

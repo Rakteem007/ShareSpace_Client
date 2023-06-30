@@ -1,6 +1,7 @@
 import { Typography,useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import WidgetWrapper from "components/WidgetWrapper";
+import { BASE_URL } from "components/URL";
 
 const AdvertWidget = () => {
 
@@ -8,6 +9,7 @@ const AdvertWidget = () => {
     const dark = palette.neutral.dark;
     const main = palette.neutral.main;
     const medium = palette.neutral.medium;
+    const pictureURL=BASE_URL+"/assets/Nvidia.png"
 
     return(
         <WidgetWrapper>
@@ -21,7 +23,7 @@ const AdvertWidget = () => {
               width="100%"
               height="auto"
               alt="advert"
-              src="https://sharespace-server.onrender.com/assets/Nvidia.png"
+              src={pictureURL}
               style={{ borderRadius : "0.75rem" , margin: "0.75rem 0"}}
              />
              <FlexBetween>

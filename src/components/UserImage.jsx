@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-const BASE_URL="https://sharespace-server.onrender.com";
+import { BASE_URL } from "./URL";
 
 const UserImage = ({ image , size = "60px"}) => (
     <Box width={size} height={size}>

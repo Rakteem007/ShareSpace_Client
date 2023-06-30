@@ -5,6 +5,7 @@ import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "./URL";
 
 const Friend = ({ friendId, name , subtitle , userPicturePath }) => {
 
@@ -19,7 +20,6 @@ const Friend = ({ friendId, name , subtitle , userPicturePath }) => {
     const primaryDark = palette.primary.dark;
     const main = palette.neutral.main;
     const medium = palette.neutral.medium;
-    const BASE_URL="https://sharespace-server.onrender.com";
 
     const isFriend = friends.find((friend) => friend._id === friendId);
 

@@ -4,6 +4,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
+import { BASE_URL } from "components/URL";
 
 const FriendListWidget = ({ userId }) => {
 
@@ -11,8 +12,7 @@ const FriendListWidget = ({ userId }) => {
     const { palette } = useTheme();
     const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
-    const BASE_URL="https://sharespace-server.onrender.com";
-
+    
     const getFriends = async () => {
         const response = await fetch(
             `${BASE_URL}/users/${userId}/friends`,

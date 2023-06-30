@@ -6,6 +6,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
+import { BASE_URL } from "components/URL";
 
 const PostWidget = ({
     postId,
@@ -25,7 +26,6 @@ const PostWidget = ({
     const loggedInUserId = useSelector((state) => state.user._id);
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;//to keep the like count same even after refresh
-    const BASE_URL="https://sharespace-server.onrender.com";
 
     const { palette } = useTheme();
     const main = palette.neutral.main;

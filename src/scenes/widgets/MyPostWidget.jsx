@@ -15,6 +15,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
+import { BASE_URL } from "components/URL";
 
 
 const MyPostWidget = ( { picturePath}) => {
@@ -29,7 +30,6 @@ const MyPostWidget = ( { picturePath}) => {
     const isNonMobileScreens = useMediaQuery("(min-width : 1000px)");
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
-    const BASE_URL="https://sharespace-server.onrender.com";
 
     const handlePost = async () => {
 
